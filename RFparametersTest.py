@@ -29,14 +29,14 @@ x_columns = [x for x in train.columns if x not in [target]]
 X = train[x_columns]  
 y = train['Target']  
    
-# 測試AUC Score
+# test AUC Score
 rf0 = RandomForestClassifier(oob_score=True, random_state=10)  
 rf0.fit(X,y)  
 print rf0.oob_score_  
 y_predprob = rf0.predict_proba(X)[:,1]  
 print "AUC Score (Train): %f" % metrics.roc_auc_score(y,y_predprob) 
 
-#對n_estimators進行最佳化搜尋  
+#optimize n_estimators  
 param_test1= {'n_estimators':range(10,71,10)}  
 gsearch1= GridSearchCV(estimator = RandomForestClassifier(min_samples_split=100,  
                                  min_samples_leaf=20,max_depth=8,max_features='sqrt' ,random_state=10),  
