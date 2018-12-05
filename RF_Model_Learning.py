@@ -80,7 +80,7 @@ def TrainingData_Preprocessing_Result(TestData,State):
     print ('accuracy:{0:0.5f}'.format(accuracy_score(y_test,result)))
     print ('================================\n')
 
-#吃進Testing資料並顯示各狀態資料筆數
+#load Testing data and show data info
 TestData0 = pd.read_csv(CSVFile0)
 TestData1 = pd.read_csv(CSVFile1)
 TestData2 = pd.read_csv(CSVFile2)
