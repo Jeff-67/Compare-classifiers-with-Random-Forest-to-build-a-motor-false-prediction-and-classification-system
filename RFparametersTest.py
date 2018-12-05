@@ -44,7 +44,7 @@ gsearch1= GridSearchCV(estimator = RandomForestClassifier(min_samples_split=100,
 gsearch1.fit(X,y)  
 print gsearch1.grid_scores_,gsearch1.best_params_, gsearch1.best_score_  
 
-#對決策樹最大深度max_depth和内部節點再劃分所需最小樣本數min_samples_split進行最佳化搜尋
+# parameter optimization :max_depth and min_samples_split
 param_test2= {'max_depth':range(3,14,2), 'min_samples_split':range(50,201,20)}  
 gsearch2= GridSearchCV(estimator = RandomForestClassifier(n_estimators= 60,  
                                  min_samples_leaf=20,max_features='sqrt' ,oob_score=True,random_state=10),  
@@ -86,7 +86,7 @@ x_columns = [x for x in train.columns if x not in [target]]
 X = train[x_columns]  
 y = train['Target']  
 
-#利用第一次超參數最佳化測試結果帶入測試 OOB Score 
+#OOB Score 
 #{'n_estimators': 10} {'min_samples_split': 50, 'max_depth': 3} 
 rf1= RandomForestClassifier(n_estimators= 10, max_depth=3, min_samples_split=50,  
                                  min_samples_leaf=20,max_features='sqrt' ,oob_score=True,random_state=10)  
@@ -103,7 +103,7 @@ print time.clock() -t0, "seconds process time"
 #Process Start#
 t0=time.clock()
 
-#min_samples_split和min_samples_leaf調教
+#min_samples_split and min_samples_leaf
 param_test3= {'min_samples_split':range(80,150,20), 'min_samples_leaf':range(10,60,10)}  
 gsearch3= GridSearchCV(estimator = RandomForestClassifier(n_estimators= 10,max_depth=3,  
                                  max_features='sqrt' ,oob_score=True, random_state=10),  
@@ -121,7 +121,7 @@ print time.clock() -t0, "seconds process time"
 #Process Start#
 t0=time.clock()
 
-#max_features調教 
+#max_features
 #with {'min_samples_split': 80, 'min_samples_leaf': 10} 
 param_test4= {'max_features':range(1,9,1)}  
 gsearch4= GridSearchCV(estimator = RandomForestClassifier(n_estimators= 10,max_depth=3, min_samples_split=80,  
@@ -173,7 +173,7 @@ from sklearn.externals import joblib
 # save the model to disk
 filename = 'D:\RFdata\DeltaData\PulseCommandDatas\Finalize_model\\finalized_model1.sav'
 joblib.dump(rf2, filename, compress=3)
-#使用compress去壓縮learing model
+#compress learing model
 # load the model from disk
 loaded_model = joblib.load(filename)
 p=loaded_model.predict(x)
