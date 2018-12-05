@@ -105,7 +105,7 @@ def makeTestData(RawData, Testdata, State, DataSize):
     out=open(TestDataTem,'wb') 
     csv_write=csv.writer(out,dialect='excel') 
     lines=txtRead.readlines()
-    #各資訊名稱寫入第一行
+
     columns=['CH1','CH2','CH3','CH4','CH5','CH6','CH7','CH8','Target'] #0:Normal; 1,2,3:UnNormal
     csv_write.writerow(columns)
     DataNum = 0
