@@ -13,14 +13,47 @@ import pandas as pd
 t0=time.clock()
 
 #RawDataName&CSVFilesName Setting
-RawData0 = 'D:\RFdata\FFT\TrainingData\Normal600rpm_1.txt'
-RawData0_1 = 'D:\RFdata\FFT\TrainingData\Normal600rpm_2.txt'
-RawData0_2 = 'D:\RFdata\FFT\TrainingData\Normal600rpmVibration_1.txt'
-RawData0_3 = 'D:\RFdata\FFT\TrainingData\Normal600rpmVibration_2.txt'
-RawData1 = 'D:\RFdata\FFT\TrainingData\UnNormal600rpm_1.txt'
-RawData1_1 = 'D:\RFdata\FFT\TrainingData\UnNormal600rpm_2.txt'
-RawData1_2 = 'D:\RFdata\FFT\TrainingData\UnNormal600rpmVibration_1.txt'
-RawData1_3 = 'D:\RFdata\FFT\TrainingData\UnNormal600rpmVibration_2.txt'
+rawdata0_0= "/Users/Apple/Desktop/MLData/rawdata0_0.csv"
+rawdata1_0= "/Users/Apple/Desktop/MLData/rawdata1_0.csv"
+rawdata2_0= "/Users/Apple/Desktop/MLData/rawdata2_0.csv"
+rawdata3_0= "/Users/Apple/Desktop/MLData/rawdata3_0.csv"
+rawdata0_1= "/Users/Apple/Desktop/MLData/rawdata0_1.csv"
+rawdata1_1= "/Users/Apple/Desktop/MLData/rawdata1_1.csv"
+rawdata2_1= "/Users/Apple/Desktop/MLData/rawdata2_1.csv"
+rawdata3_1= "/Users/Apple/Desktop/MLData/rawdata3_1.csv"
+rawdata0_2= "/Users/Apple/Desktop/MLData/rawdata0_2.csv"
+rawdata1_2= "/Users/Apple/Desktop/MLData/rawdata1_2.csv"
+rawdata2_2= "/Users/Apple/Desktop/MLData/rawdata2_2.csv"
+rawdata3_2= "/Users/Apple/Desktop/MLData/rawdata3_2.csv"
+rawdata0_3= "/Users/Apple/Desktop/MLData/rawdata0_3.csv"
+rawdata1_3= "/Users/Apple/Desktop/MLData/rawdata1_3.csv"
+rawdata2_3= "/Users/Apple/Desktop/MLData/rawdata2_3.csv"
+rawdata3_3= "/Users/Apple/Desktop/MLData/rawdata3_3.csv"
+rawdata0_4= "/Users/Apple/Desktop/MLData/rawdata0_4.csv"
+rawdata1_4= "/Users/Apple/Desktop/MLData/rawdata1_4.csv"
+rawdata2_4= "/Users/Apple/Desktop/MLData/rawdata2_4.csv"
+rawdata3_4= "/Users/Apple/Desktop/MLData/rawdata3_4.csv"
+rawdata0_5= "/Users/Apple/Desktop/MLData/rawdata0_5.csv"
+rawdata1_5= "/Users/Apple/Desktop/MLData/rawdata1_5.csv"
+rawdata2_5= "/Users/Apple/Desktop/MLData/rawdata2_5.csv"
+rawdata3_5= "/Users/Apple/Desktop/MLData/rawdata3_5.csv"
+rawdata0_6= "/Users/Apple/Desktop/MLData/rawdata0_6.csv"
+rawdata1_6= "/Users/Apple/Desktop/MLData/rawdata1_6.csv"
+rawdata2_6= "/Users/Apple/Desktop/MLData/rawdata2_6.csv"
+rawdata3_6= "/Users/Apple/Desktop/MLData/rawdata3_6.csv"
+rawdata0_7= "/Users/Apple/Desktop/MLData/rawdata0_7.csv"
+rawdata1_7= "/Users/Apple/Desktop/MLData/rawdata1_7.csv"
+rawdata2_7= "/Users/Apple/Desktop/MLData/rawdata2_7.csv"
+rawdata3_7= "/Users/Apple/Desktop/MLData/rawdata3_7.csv"
+rawdata0_8= "/Users/Apple/Desktop/MLData/rawdata0_8.csv"
+rawdata1_8= "/Users/Apple/Desktop/MLData/rawdata1_8.csv"
+rawdata2_8= "/Users/Apple/Desktop/MLData/rawdata2_8.csv"
+rawdata3_8= "/Users/Apple/Desktop/MLData/rawdata3_8.csv"
+rawdata0_9= "/Users/Apple/Desktop/MLData/rawdata0_9.csv"
+rawdata1_9= "/Users/Apple/Desktop/MLData/rawdata1_9.csv"
+rawdata2_9= "/Users/Apple/Desktop/MLData/rawdata2_9.csv"
+rawdata3_9= "/Users/Apple/Desktop/MLData/rawdata3_9.csv"
+
 PeakValueFrom = 'D:\RFdata\FFT\TrainingData\Normal600rpm_1.csv'
 CSVFile = r'D:\RFdata\FFT\TrainingData\PulseCommand600_Peak_10k.csv'
 DataSize = 2500
@@ -197,7 +230,7 @@ Save_Learning_Model = r'D:\RFdata\FFT\FinalModel\PulseCommand600_Peak_OK_10k.sav
 #Process Start#
 t0=time.clock()
 
-#吃進Training資料並顯示各狀態資料筆數
+#load training data
 Train= pd.read_csv(CSVFile)  
 target='Target'  
 print ("State / counts")
@@ -215,7 +248,7 @@ print ('OOB_Score:',RF.oob_score_)
 #y_predprob = RF.predict_proba(x)[:,1]  
 #print "AUC Score (Train): %f" % metrics.roc_auc_score(y,y_predprob) 
 
-#存取Learing Model
+#saving Learing Model
 joblib.dump(RF, Save_Learning_Model, compress=3) #使用compress去壓縮learing model
 
 
@@ -254,7 +287,7 @@ def TrainingData_Preprocessing_Result(TestData,State):
     print ('accuracy:{0:0.5f}'.format(accuracy_score(y_test,result)))
     print ('================================\n')
 
-#吃進Testing資料並顯示各狀態資料筆數
+#load Testing data and show data info
 TestData0 = pd.read_csv(CSVFile0)
 TestData1 = pd.read_csv(CSVFile1)
 print ("State / counts")
