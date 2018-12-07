@@ -6,17 +6,17 @@ Electric motors are the important power source for intelligent manufacturing; ho
 
 > [Data preprocessing](#data-preprocessing)
 
-- Feature selection
+  - Feature selection
 
 > [Model training](#model-training) 
 
-- Algorism intriduction
+  - Algorism intriduction
   
-- hyper parameter tunning
+  - hyper parameter tunning
 
-> [Why Random Forest?](#why-random-forest?)
+> [Why Random Forest?](#why-random-forest)
 
-- Compare with other algorithm
+  - Compare with other algorithm
 
 > [Conclusion](#conclusion)
 
