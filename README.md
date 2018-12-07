@@ -4,8 +4,6 @@
 # Guide line
 > [Data introduction](#data-introduction) 
 
-> [Data processing](#data-processing)
-
   - Real time raw data
   
   - Features extraction
@@ -13,9 +11,11 @@
 
 > [Model training](#model-training) 
 
-  - Algorism intriduction
+  - Algorithm intriduction
   
   - hyper parameter tunning
+  
+  - Status Voting Method
 
 > [Why Random Forest?](#why-random-forest)
 
@@ -31,7 +31,6 @@ A proper data of electrical motor false classification consists of the real-time
 |![screen shot 2018-12-07 at 4 25 40 pm](https://user-images.githubusercontent.com/36265245/49637409-4490ee80-fa40-11e8-8e07-9aeb9335f3f8.png)    | ![screen shot 2018-12-07 at 4 29 11 pm](https://user-images.githubusercontent.com/36265245/49637415-465ab200-fa40-11e8-83f6-2790bd4622c2.png)
 | <a>**Fig.1**</a> | <a>**Fig.2**</a> 
 
-# Data processing
 - Real time raw data
 
   Acquisitions of the rolling element bearing’s real-time raw data and controlling command from servo motor driver were performed on the     oscilloscope which is shown in Fig. 3. It provides 8 channels which have 16 bytes memory and 4KHz sampling frequency for each. Fig. 4     displays the acquisition’s rule of the training data which was set for appropriate experimental temperature, working time and             experimental station running speed.
@@ -40,6 +39,7 @@ A proper data of electrical motor false classification consists of the real-time
   | :---: |:---:| 
   |![screen shot 2018-12-07 at 4 29 41 pm](https://user-images.githubusercontent.com/36265245/49638044-00065280-fa42-11e8-9ef4-8c0de60c9a6f.png)  | ![screen shot 2018-12-07 at 4 47 12 pm](https://user-images.githubusercontent.com/36265245/49638046-009ee900-fa42-11e8-8d96-f227b8fa0909.png)
   | <a>**Fig.3**</a> | <a>**Fig.4**</a> 
+  
 - Features extraction
 
   Servo Driver provides many of real-time signals and commands which can be obtained from oscilloscope. I choose 8 motor related real-time information (all are in time domain) to be the features for model learning(shown in Fig.5).
@@ -50,5 +50,20 @@ A proper data of electrical motor false classification consists of the real-time
   | <a>**Fig.5**</a> | 
   
 # Model training
+Scikit-learn is an open-source machine learning software, which is easy to use. Scikit-learn provides classification, regression, clustering and dimensionality reduction libraries for python programming. I used Scikit-learn and random forests algorithm to classify rolling element bearing and motor condition and make prediction.
+
+  - Algorithm intriduction
+  
+    The characteristics of random forest are adding an additional layer of randomness to bagging that constructing each tree using a different bootstrap sample of the data. Bagging is a well- known type of classification trees, which is that successive trees do not depend on earlier trees. Each tree is independently constructed using a bootstrap sample of the data set. In the end, a simple majority vote is taken for prediction. In standard decision trees, each node is split using the best split among all variables. In random forests, each node is split using the best among a subset of predictors randomly chosen at that node. This strategy makes random forest performing better than many other classifiers, including decision trees, discriminant analysis and support vector machines. Random forest is also robust against overfitting.
+    
+    ![screen shot 2018-12-07 at 9 58 15 pm](https://user-images.githubusercontent.com/36265245/49651837-4623dc00-fa6b-11e8-9c3c-39e30422af09.png)
+    
+ 
+  - hyper parameter tunning
+  
+    
+  
+  - Status Voting Method
+  
 # Why Random Forest?
 # Conclusion
