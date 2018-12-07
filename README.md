@@ -52,17 +52,35 @@ A proper data of electrical motor false classification consists of the real-time
 # Model training
 Scikit-learn is an open-source machine learning software, which is easy to use. Scikit-learn provides classification, regression, clustering and dimensionality reduction libraries for python programming. I used Scikit-learn and random forests algorithm to classify rolling element bearing and motor condition and make prediction.
 
-  - Algorithm intriduction
+  - Random Forest algorithm intriduction
   
     The characteristics of random forest are adding an additional layer of randomness to bagging that constructing each tree using a different bootstrap sample of the data. Bagging is a well- known type of classification trees, which is that successive trees do not depend on earlier trees. Each tree is independently constructed using a bootstrap sample of the data set. In the end, a simple majority vote is taken for prediction. In standard decision trees, each node is split using the best split among all variables. In random forests, each node is split using the best among a subset of predictors randomly chosen at that node. This strategy makes random forest performing better than many other classifiers, including decision trees, discriminant analysis and support vector machines. Random forest is also robust against overfitting.
     
     ![screen shot 2018-12-07 at 9 58 15 pm](https://user-images.githubusercontent.com/36265245/49651837-4623dc00-fa6b-11e8-9c3c-39e30422af09.png)
     
- 
-  - hyper parameter tunning
+  - training and test data preprocessing
   
+    The training data used in this part are collected from the 10 groups of original training data sets which contains the four motor states and I selected 2500 volumes of data from every state containing the information about CH1 ~ CH8 randomly. Finally, a group of 10000 training data containing four states was obtained. The purpose of this step is to make the collection of training data become more various, so as to prove the credibility of training data.
+    (Note: I deal with the test data in the same way, the volume of test data is 10000 at first also.)
     
-  
+    ![screen shot 2018-12-07 at 10 33 23 pm](https://user-images.githubusercontent.com/36265245/49653522-2511ba00-fa70-11e8-8726-5c8b6851fc00.png)
+    
+    
+    In addition to normal data preprocessing, I do the advance data preprocessing and get the better prediction accuracy.
+    
+    CH1max :The maximum value of CH1 in the training data set 
+    
+    CH1min : The minimum value of CH1 in the training data set 
+    
+    CH1peak :The peak value of CH1 in the training data set 
+    
+    CH1peak = CH1max -((CH1max -CH1min)*2%)
+    
+    ![screen shot 2018-12-07 at 10 24 50 pm](https://user-images.githubusercontent.com/36265245/49653558-48d50000-fa70-11e8-9caa-0e5c8c9cf0d7.png)
+
+
+  - Feature filtering
+  - hyper parameter tunning
   - Status Voting Method
   
 # Why Random Forest?
