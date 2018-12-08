@@ -156,9 +156,12 @@ Scikit-learn is an open-source machine learning software, which is easy to use. 
   
 # Why Random Forest?
 
-<a href="https://github.com/JEFF0824/Using-Random-forest-to-design-an-on-line-electrical-motor-false-diagnose-and-predict-system/blob/master/RFparametersTest.py" target="_blank">Here</a> is the code!!
+<a href="https://github.com/JEFF0824/Using-Random-forest-to-design-an-on-line-electrical-motor-false-diagnose-and-predict-system/blob/master/compare_different_classifier.py" target="_blank">Here</a> is the code!!
     
 I compare Random forest with other three kinds of classfiers, which are KNN, decision tree and SVM and i will give brief introduction about those algorithms.
+
+
+<a href="https://github.com/JEFF0824/Using-Random-forest-to-design-an-on-line-electrical-motor-false-diagnose-and-predict-system/blob/master/KnnTrain.py" target="_blank">Here</a> is the code!!
 
 - KNN
   ![screen shot 2018-12-08 at 7 19 00 pm](https://user-images.githubusercontent.com/36265245/49685436-3d401280-fb1e-11e8-8e8a-400a46f1f96f.png)
