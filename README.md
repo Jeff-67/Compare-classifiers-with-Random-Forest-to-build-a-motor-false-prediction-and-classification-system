@@ -11,7 +11,13 @@
 
 > [Model training](#model-training) 
 
-  - Algorithm intriduction
+  - Random Forest algorithm intriduction
+  
+  - training and test data preprocessing
+  
+  - Feature filtering
+  
+  - Data size choosing
   
   - hyper parameter tunning
   
@@ -79,9 +85,9 @@ Scikit-learn is an open-source machine learning software, which is easy to use. 
     
     ![screen shot 2018-12-07 at 10 24 50 pm](https://user-images.githubusercontent.com/36265245/49653558-48d50000-fa70-11e8-9caa-0e5c8c9cf0d7.png)
     
-    | <a>**The comparison of two kinds of data processing**</a> | 
+    | <a>**The comparison of different data preprocessing**</a> | 
     | :---: |
-    |![screen shot 2018-12-07 at 10 38 22 pm](https://user-images.githubusercontent.com/36265245/49682825-bb3bf380-faf5-11e8-8d9e-3743a2e4111d.png) | 
+    |![screen shot 2018-12-07 at 10 38 22 pm](https://user-images.githubusercontent.com/36265245/49682922-71540d00-faf7-11e8-9feb-dacec4a853c5.png)| 
 
   - Feature filtering
   
@@ -93,7 +99,23 @@ Scikit-learn is an open-source machine learning software, which is easy to use. 
     |![screen shot 2018-12-07 at 10 53 23 pm](https://user-images.githubusercontent.com/36265245/49654558-18db2c00-fa73-11e8-9657-3b208bd6716e.png)| ![screen shot 2018-12-07 at 10 54 15 pm](https://user-images.githubusercontent.com/36265245/49654559-1a0c5900-fa73-11e8-93d5-5ed43ae589e9.png)
     | <a>**Fig.6**</a> | <a>**Fig.7**</a> 
     
+  - Data size choosing
+    
+    The results of six kinds of data size are shown below, we can see that the prediction accuracy is the highest when the amount of training data is 100K, which proves that the more the amount of training data is, the better the training model will be.
+    
+    | <a>**The comparison of different data size**</a> | 
+    | :---: |
+    |![screen shot 2018-12-07 at 10 38 34 pm](https://user-images.githubusercontent.com/36265245/49682928-96e11680-faf7-11e8-967c-d9cb1c32a854.png)| 
+    
   - hyper parameter tunning
+    
+    After doing proper feature extraction, training data preprocessing and deciding proper training data size, model improving is through hyper parameter tunning and determining the proper one by OOB_Score. I use the powerful function called `sklearn.model_selection.GridSearchCV` to run all the parameters fisrt and then narrow down to the parameter 'n_estimators'. Fig. 8 shows that in the case of n_estimators=70, the OOB_Score is 0.9389, which is the best score between n_estimators=10~80. At last, it can be seen in Fig. 9 that the prediction accuracy of each state of n_estimators=70 is 0.998, 0.9981, 0.9989 and 0.998, all are better than the case of n_estimators=10. Consequently, the learning model of this project is based on 8 features of real-time raw data and controlling command from servo motor driver, 100k pieces of training data size, advance data preprocessing of CH1 peak value and n_estimators=70.
+    
+    | <a>**OOB_Score of different n_estimators**</a> | <a>**Prediction accuracy of n_estimators=10,70**</a> 
+    | :---: |:---:| 
+    |![screen shot 2018-12-07 at 10 38 43 pm](https://user-images.githubusercontent.com/36265245/49683015-fb50a580-faf8-11e8-8498-0683f3132ec0.png)| ![screen shot 2018-12-07 at 10 38 53 pm](https://user-images.githubusercontent.com/36265245/49683016-fb50a580-faf8-11e8-9a12-f6dbca07cca5.png)
+    | <a>**Fig.8**</a> | <a>**Fig.9**</a> 
+    
   - Status Voting Method
   
 # Why Random Forest?
