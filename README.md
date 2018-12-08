@@ -61,7 +61,8 @@ Scikit-learn is an open-source machine learning software, which is easy to use. 
   - training and test data preprocessing
   
     The training data used in this part are collected from the 10 groups of original training data sets which contains the four motor states and I selected 2500 volumes of data from every state containing the information about CH1 ~ CH8 randomly. Finally, a group of 10000 training data containing four states was obtained. The purpose of this step is to make the collection of training data become more various, so as to prove the credibility of training data.
-    (Note: I deal with the test data in the same way, the volume of test data is 10000 at first also.)
+    
+    (Note: I deal with the test data in the same way, the volume of test data is 10000 at first also).
     
     ![screen shot 2018-12-07 at 10 33 23 pm](https://user-images.githubusercontent.com/36265245/49653522-2511ba00-fa70-11e8-8726-5c8b6851fc00.png)
     
@@ -77,9 +78,21 @@ Scikit-learn is an open-source machine learning software, which is easy to use. 
     CH1peak = CH1max -((CH1max -CH1min)*2%)
     
     ![screen shot 2018-12-07 at 10 24 50 pm](https://user-images.githubusercontent.com/36265245/49653558-48d50000-fa70-11e8-9caa-0e5c8c9cf0d7.png)
-
+    
+    | <a>**The comparison of two kinds of data processing**</a> | 
+    | :---: |
+    |![screen shot 2018-12-07 at 10 38 22 pm](https://user-images.githubusercontent.com/36265245/49682825-bb3bf380-faf5-11e8-8d9e-3743a2e4111d.png) | 
 
   - Feature filtering
+  
+    In this part, I seperate all the features into four gruops (Shown in Fig.6 below), each of them is: speed relative features, location related features, torque related features and the other feature.
+    After, I combine those feature cluster in various way (Shown in Fig.7 below), the result indicates that the combination of all features get the highest OOB_Score, thus I regard CH1~CH8 as the data features.
+    
+    | <a>**Features cluster**</a> | <a>**Result**</a> 
+    | :---: |:---:| 
+    |![screen shot 2018-12-07 at 10 53 23 pm](https://user-images.githubusercontent.com/36265245/49654558-18db2c00-fa73-11e8-9657-3b208bd6716e.png)| ![screen shot 2018-12-07 at 10 54 15 pm](https://user-images.githubusercontent.com/36265245/49654559-1a0c5900-fa73-11e8-93d5-5ed43ae589e9.png)
+    | <a>**Fig.6**</a> | <a>**Fig.7**</a> 
+    
   - hyper parameter tunning
   - Status Voting Method
   
