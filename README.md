@@ -37,7 +37,7 @@
   
   - Comparison Result
 
-> [Conclusion](#conclusion)
+> [Future work](#future-work)
 
 # Data introduction
 A proper data of electrical motor false classification consists of the real-time operating raw data and controlling command of rolling element bearings via the acquisition station (shown in Fig.1), data processing, feature extraction from the data sets and classification into functional (State0) or defective (State1, State2, State3) status (shown in Fig.2) of rolling element bearing. To be more specific, I get the data from a real packing machine motor.
@@ -185,11 +185,5 @@ Last but not least, decision tree and random forest are quite similar in some ca
 | :---: |
 |![screen shot 2018-12-08 at 7 58 43 pm](https://user-images.githubusercontent.com/36265245/49685728-ac6c3580-fb23-11e8-98cb-edb5d648bd34.png)| 
 
-
-
-
-
-
-
-
-# Conclusion
+# Future work
+The future work could be related to the implementation of the presented approach on the cloud system, IoT or embedded system computation platform as well as to do more non real-time motor faults’ feature extractions making prediction system much more complete.
