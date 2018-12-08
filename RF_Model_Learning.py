@@ -23,7 +23,7 @@ Save_Learning_Model = 'D:\RFdata\DeltaData\PulseCommandDatas\Finalize_model\ALLR
 #Process Start#
 t0=time.clock()
 
-#吃進Training資料並顯示各狀態資料筆數
+#load Training data and info
 Train= pd.read_csv(CSVFile)  
 target='Target'  
 print ("State / counts")
@@ -39,7 +39,7 @@ RF.fit(x,y)
 # Show OOB_Score, AUC_Score 
 print ('OOB_Score:',RF.oob_score_)  
 
-#存取Learing Model
+#save Learing Model
 joblib.dump(RF, Save_Learning_Model, compress=3) #使用compress去壓縮learing model
 
 
