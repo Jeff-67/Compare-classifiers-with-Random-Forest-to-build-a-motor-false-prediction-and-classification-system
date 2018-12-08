@@ -159,6 +159,20 @@ I compare Random forest with other three kinds of classfiers, which are KNN, dec
 
 - KNN
 
+  ![screen shot 2018-12-08 at 7 19 00 pm](https://user-images.githubusercontent.com/36265245/49685436-3d401280-fb1e-11e8-8e8a-400a46f1f96f.png)
+  
+- SVM
+
+  ![screen shot 2018-12-08 at 7 19 11 pm](https://user-images.githubusercontent.com/36265245/49685437-3fa26c80-fb1e-11e8-8e0e-259d85256b7b.png)
+  
+- Decision Tree
+
+  ![screen shot 2018-12-08 at 7 19 23 pm](https://user-images.githubusercontent.com/36265245/49685438-416c3000-fb1e-11e8-8d46-7dcac75b4ebf.png)
+
+
+
+
+
 
 
 # Conclusion
