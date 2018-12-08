@@ -29,7 +29,13 @@
 
 > [Why Random Forest?](#why-random-forest)
 
-  - Compare with other algorithm
+  - KNN
+  
+  - SVM
+  
+  - Decision Tree
+  
+  - Comparison Result
 
 > [Conclusion](#conclusion)
 
@@ -149,4 +155,10 @@ Scikit-learn is an open-source machine learning software, which is easy to use. 
     | <a>**Fig.12**</a> |
   
 # Why Random Forest?
+I compare Random forest with other three kinds of classfiers, which are KNN, decision tree and SVM and i will give brief introduction about those algorithms.
+
+- KNN
+
+
+
 # Conclusion
