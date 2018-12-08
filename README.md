@@ -155,19 +155,33 @@ Scikit-learn is an open-source machine learning software, which is easy to use. 
     | <a>**Fig.12**</a> |
   
 # Why Random Forest?
+
+<a href="https://github.com/JEFF0824/Using-Random-forest-to-design-an-on-line-electrical-motor-false-diagnose-and-predict-system/blob/master/RFparametersTest.py" target="_blank">Here</a> is the code!!
+    
 I compare Random forest with other three kinds of classfiers, which are KNN, decision tree and SVM and i will give brief introduction about those algorithms.
 
 - KNN
-
   ![screen shot 2018-12-08 at 7 19 00 pm](https://user-images.githubusercontent.com/36265245/49685436-3d401280-fb1e-11e8-8e8a-400a46f1f96f.png)
   
 - SVM
-
   ![screen shot 2018-12-08 at 7 19 11 pm](https://user-images.githubusercontent.com/36265245/49685437-3fa26c80-fb1e-11e8-8e0e-259d85256b7b.png)
   
 - Decision Tree
-
   ![screen shot 2018-12-08 at 7 19 23 pm](https://user-images.githubusercontent.com/36265245/49685438-416c3000-fb1e-11e8-8d46-7dcac75b4ebf.png)
+
+Fig.13 and Fig.14 indicates the results of comparing random forest with the three classifiers I mentioned, as i predicted, random forest is the best classifiers in this project.
+
+| <a></a> | <a></a>
+| :---: |:---:| 
+|![screen shot 2018-12-08 at 7 47 36 pm](https://user-images.githubusercontent.com/36265245/49685657-23a0ca00-fb22-11e8-8472-2dad1191883e.png)| ![screen shot 2018-12-08 at 7 47 26 pm](https://user-images.githubusercontent.com/36265245/49685658-24d1f700-fb22-11e8-9367-01edbec14470.png)|
+| <a>**Fig.13**</a> | <a>**Fig.14**</a> |
+
+Last but not least, decision tree and random forest are quite similar in some case, therefore I list out some certain differences between them.
+
+| <a></a> | 
+| :---: |
+|![screen shot 2018-12-08 at 7 58 43 pm](https://user-images.githubusercontent.com/36265245/49685728-ac6c3580-fb23-11e8-98cb-edb5d648bd34.png)| 
+
 
 
 
