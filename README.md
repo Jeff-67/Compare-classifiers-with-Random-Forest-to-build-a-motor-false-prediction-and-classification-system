@@ -143,7 +143,7 @@ Scikit-learn is an open-source machine learning software, which is easy to use. 
     
     w3  = State3 votes number
     
-    w + w + w + w = 1000(totalvotesnumber)
+    w0 + w1 + w2 + w3 = 1000(totalvotesnumber)
 
     w  = max(w0,w1,w2,w3) 
     
