@@ -1,6 +1,6 @@
 # Using Random forest to design an on-line electrical motor false classifying and predicting system
 # Abstract
-  Electric motors are the important power source for intelligent manufacturing; however, motor eccentric is a serious problem that will occurs when robots or machine have operate for a while. This fault will cause damage to power modules, but traditional solutions were mostly depends on expensive sensors and the are not able to make a precise presdiction. In this project, we will foucus on the eccentricity fault by collecting big data and do the further classification and prediction based on Random Forest.
+  Electric motors are the important power source for intelligent manufacturing; however, motor eccentric is a serious problem that will occurs when robots or machine have operate for a while. This fault will cause damage to power modules, but traditional solutions were mostly depends on expensive sensors and the are not able to make a precise prediction. In this project, we will foucus on the eccentricity fault by collecting big data and do the further classification and prediction based on Random Forest.
   
   <a href="https://github.com/JEFF0824/Using-Random-forest-to-design-an-on-line-electrical-motor-false-diagnose-and-predict-system/blob/master/ProjectForALL%20.py" target="_blank">Here</a> is the code!!
   
